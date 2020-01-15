@@ -4,7 +4,7 @@
 <mapper namespace="io.renren.modules.sys.dao.SysDictDao">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="io.renren.modules.sys.entity.SysDictEntity" id="sysDictMap">
+    <resultMap type="io.renren.modules.sys.entity.SysDictEntity" id="sysDictMap1">
         <result property="id" column="id"/>
         <result property="pid" column="pid"/>
         <result property="dictType" column="dict_type"/>
@@ -19,7 +19,7 @@
         <result property="updateDate" column="update_date"/>
     </resultMap>
 
-    <select id="queryPidList" resultMap="sysDictMap">
+    <select id="queryPidList" resultMap="sysDictMap1">
         select * from sys_dict where del_flag='0' and pid='0'
     </select>
 </mapper>
